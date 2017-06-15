@@ -363,13 +363,42 @@ for (var i = 0; i < player.length; i++) {
 //-----------------
 
 
+function decode(string) {
+
 let code = {
   a: 2,
   b: 3,
   c: 4,
   d: 5
+};
+  
+  if (string[0] === "a"){
+		console.log(string[1])
+  }
+  if (string[0] === "b"){
+		console.log(string[2]);
+  }
+  if (string[0] === "c"){
+	console.log(string[3]);
+  }
+  if (string[0] === "d"){
+  console.log(string[4]);
+  }
+  else {
+    console.log(" ")
+  }
 }
 
+decode("craft");
+decode("block");
+decode("argon");
+decode("meter");
+decode("bells");
+decode("brown");
+decode("croon");
+decode("droop");
+
+//----------------
 
 
 
