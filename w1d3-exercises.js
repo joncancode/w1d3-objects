@@ -400,6 +400,70 @@ decode("droop");
 
 //----------------
 
+function createCharacter (nickname, race, origin, attack, defense) {
+  return{
+    nickname, race, origin, attack, defense,
+  fight: function(){
+    return {
+      nickname, attack, defense
+    }
+  },
+  describe: function(){
+  
+  console.log(`${nickname} is a ${race} from ${origin}.`);
+    },
+  evaluateFight: function(attacker){
+
+    console.log(`${nickname} attacked with ${attack} points and ${attacker.nickname} has ${attacker.defense - attack} left`)
+
+  console.log(`Your opponent takes ${attack-defense} damage and you receive ${defense - attacker.attack} damage`);
+    }
+  }
+}
+
+var gandalf = createCharacter('Gandalf', 'wizard', 'Middle Earth', 10, 6);
+var bilbo = createCharacter('Bilbo', 'hobbit', 'The Shire', 2, 1);
+var frodo = createCharacter('Frodo', 'hobbit', 'The Shire', 3, 2);
+var aragorn = createCharacter('Aragorn', 'man', 'Dunnedain', 6, 8);
+var legolas = createCharacter('Legolas', 'elf', 'Woodland', 8, 5);
+
+// gandalf.describe();  
+// bilbo.describe();
+// frodo.describe();
+// aragorn.describe();
+// legolas.describe();
+//gandalf.evaluateFight(bilbo.attack());
+gandalf.evaluateFight(frodo);
+
+let characters = [gandalf.nickname, bilbo.nickname, frodo.nickname, aragorn.nickname, legolas.nickname]
+
+console.log(characters)
+
+var arwen = createCharacter('Arwen', 'half-elf', 'Rivendell', 7, 3)
+characters.push(arwen)
+console.log(characters.nickname)
+
+// is Aragorn using find
+function isName(element) {
+  for (var i = 0; i < characters.length; i++){
+  if (element === characters[i].nickname){
+  return characters[i].describe}
+  }
+}
+characters.find(isName)
+
+// form array of Hobbits
+
+function isHobbit(race){
+  let hobbitGroup = []
+  if (characters.race === 'hobbit'){
+  hobbitGroup.push() 
+  console.log(hobbitGroup)
+  }
+}
+
+// form array of attack +5
+
 
 
 
